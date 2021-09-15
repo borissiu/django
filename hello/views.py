@@ -15,9 +15,7 @@ def boris(request):
 
 
 def hello_there(request, name):
-    return render(
-        request,
-        'hello/hello_there.html',
+    return render(request, 'hello/hello_there.html',
         {
             'name': name,
             'date': datetime.now()

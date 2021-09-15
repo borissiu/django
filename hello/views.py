@@ -7,8 +7,8 @@ from django.http import HttpResponse
 import re
 from django.utils.timezone import datetime
 
-def home(request):
-    return HttpResponse("Hello, Django!")
+#def home(request):
+#    return HttpResponse("Hello, Django!")
 
 def boris(request):
     return HttpResponse("Hello, Boris!")
@@ -23,3 +23,12 @@ def hello_there(request, name):
             'date': datetime.now()
         }
     )
+
+def home(request):
+    return render(request, "hello/home.html")
+
+def about(request):
+    return render(request, "hello/about.html")
+
+def contact(request):
+    return render(request, "hello/contact.html")
